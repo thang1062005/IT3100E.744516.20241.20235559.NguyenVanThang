@@ -78,9 +78,6 @@ class QuadraticEquation {
             System.out.println("The equation has no real roots.");
         }
     }
-}
-
-public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
