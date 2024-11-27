@@ -1,6 +1,0 @@
-Accessor methods (getters and setters) should be used sparingly and only in specific situations where encapsulation is still preserved. Here are some cases where accessors can be justified:
-Returning Objects Through Interfaces: If a method returns an object, returning it as an interface rather than a direct field type is acceptable. This approach isolates external code from the internal details of the object’s implementation, maintaining flexibility for future changes without directly exposing the internal state.
-
-Boundary Layers in Object-Oriented Systems: Accessors are generally more acceptable at the boundary between an OO system and a procedural system, such as with databases or operating systems. Since the structure of external systems can be unpredictable, these boundary APIs often require more flexibility, making accessors a practical choice here.
-
-JavaBean Compatibility: JavaBeans traditionally use getters and setters for property access, intended for UI-builder tools to interact with JavaBean properties. The original purpose of these accessors was not for direct calling in application code but for external tools to interpret and work with the bean’s properties.
