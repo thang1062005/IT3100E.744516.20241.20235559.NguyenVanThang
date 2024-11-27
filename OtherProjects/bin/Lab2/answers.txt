@@ -1,0 +1,34 @@
+
+Yes, Java allows you to create multiple constructor methods in a class with different parameter lists. This is known as constructor overloading.
+
+In your case, you can create two constructor methods in your DVD class, one that takes a title parameter and another that takes a category parameter. Here's an example:
+
+public class DVD {
+    private String title;
+    private String category;
+
+    public DVD(String title) {
+        this.title = title;
+    }
+
+    public DVD(String title, String category) {
+        this.title = title;
+        this.category = category;
+    }
+
+    // other methods for the DVD class...
+}
+
+In this example, we have two constructor methods for the DVD class. The first constructor takes a title parameter and sets the DVD's title. The second constructor takes both a title and category parameter and sets both the DVD's title and category.
+
+By having these two constructor methods, you can create new DVD objects using either constructor, depending on which parameters you have available. For example:
+
+
+// create a new DVD object with just a title
+DVD dvd1 = new DVD("The Matrix");
+
+// create a new DVD object with both a title and a category
+DVD dvd2 = new DVD("The Godfather", "Crime");
+
+
+Overall, constructor overloading in Java is a useful feature that allows you to create more flexible and versatile classes.

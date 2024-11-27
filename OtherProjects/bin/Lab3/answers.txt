@@ -1,0 +1,24 @@
+1. Is JAVA a Pass by Value or a Pass by Reference programming language? 	
+=> Answers: In Java, variables of primitive types (such as int, float, boolean) are passed by value, while variables of reference types (such as objects) are
+passed by value as well, but the value being passed is a reference to the object. 
+This is often a source of confusion when discussing whether Java is pass by value or pass by reference.
+
+When a method is called in Java and arguments are passed to it, the values of the variables are copied and passed to the method. 
+For primitive types, the method receives a copy of the value, and any changes made to the copy within the method do not affect the original value outside the method.
+
+For reference types, the value being passed is a reference to an object in memory. The method receives a copy of this reference, 
+so changes made to the reference itself within the method (e.g., assigning a new object to the reference) do not affect the original reference outside the method. 
+However, the method can still modify the state of the object itself (e.g., modifying its properties or invoking its methods), 
+and these changes will be visible outside the method because both the original reference and the method's copy refer to the same object in memory.
+
+To summarize, Java is strictly pass by value, but for reference types, the value being passed is a copy of the reference, not the object itself.
+
+2. 
+Ask: After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+Answer: The reason why the title of jungleDVD and cinderellaDVD remain the same after calling swap() method is that 
+Java passes arguments to methods by value, not by reference. In the swap() method, even though we swap s1 and s2, 
+it only modifies the values of its local variables, which are copies of the references to the objects created in the main() method. 
+Therefore, the original objects themselves are left intact and their state doesn't change.
+
+Ask: After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+Answer: Since we use the mutator of this object in this function, so the title of the JungleDVD changed
