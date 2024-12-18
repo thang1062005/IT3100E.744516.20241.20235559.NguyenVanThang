@@ -1,5 +1,7 @@
-package hust.soict.dsai.aims.media;
+package hust.soict.cybersec.aims.media;
 
 public interface Playable {
-	public void play();
+    
+    public void play();
+
 }
